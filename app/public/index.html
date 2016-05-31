@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Experiod</title>
+    <meta name="keywords" content="RCB CODING NODE.JS NODE JAVASCRIPT HTML auth0 EXPRESS MEAN MySQL  REACT METEOR NoSQL SOCIAL YELP
+          DISCUSSION PROJECT HELP COLLABORATION GROUP CODE NEWJERSEY NEW JERSEY JQUERY HTML CSS BOOTSTRAP
+          LINUX WINDOWS MAC IOS ANDROID FULLSTACK FULL STACK DEV DEVELOPMENT JRDEV JR ">
+    <meta name="description" content="Survey based application to help a user find the perfect restaurant or bar to goto at anytime of the day or night. Whether the user wants a late night snack or a romantic dinner, we will place that person to the perfect location!!!!">
+    
+   <!-- SOCIAL MEDIA ICONS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.css">
+    <!-- GOOGLE FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700|Oswald' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MDB core CSS -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- LOCAL CSS -->
+    <link rel="stylesheet" type="text/css" href="css/landing-page.css">
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav class="navbar default-transparent">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="images/logo/minilogo.png" class="img-responsive">
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" class="waves-effect waves-light">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#" class="waves-effect waves-light">Restaurants</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /NAV -->
+    <div class="container text-center">
+        <div class="row logo">
+            <div class="col-md-6 col-md-offset-3">
+                <img src="images/logo/mainlogo.png" class="img-responsive animated slideInDown">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 icons">
+                <a href=""><i class="ion-social-facebook"></i></a>
+                <a href="https://github.com/BryantBello/Soup-A-Stars"><i class="ion-social-octocat"></i></a>
+                <a href=""><i class="ion-social-linkedin-outline"></i></a>
+                <a href=""><i class="ion-social-twitter"></i></a>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <button class="btn btn-danger btn-lg animated infinite pulse" style='background-color: #f44336; color: white' onclick="window.signin();">Get started
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id='modalBox'></div>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+    <!-- BACKGROUND CHANGER -->
+    <script src="js/main-page-background.js"></script>
+    <!-- OAUTH SCRIPT -->
+    <script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
+    <script type="text/javascript">
+    var url = window.location.origin;
+    $.get(url + '/user-info', function(result){
+        console.log(result)
+        if(result.id != undefined){
+            $("#modalBox").append('<button type="button" id="modalSwitch" style="display:none" class="btn btn-primary" data-toggle="modal"data-target="#myModal">Details</button><div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><div class="row"><div class="col-md-5 col-sm-5"><img style="height:175px" class="img-responsive" src='+result.picture+'></div><div class="col-md-7 col-sm-7 text-xs-center"><br><h3 class="modal-title" style="font-size:22px" id="myModalLabel">Welcome Back '+result.displayName+'!</h3><br><a class="btn btn-danger waves-effect waves-light text-xs-center" style="background-color: #f44336; color: white; margin-left:40px" href="/survey-request">Find Matches <span class="glyphicon glyphicon-search"></span></a><br><button type="button" style="margin-left:65px" class="btn btn-secondary text-xs-center" data-dismiss="modal">Not you?</button></div></div></div></div></div></div>');
+            $("#modalSwitch").click();
+        }
+    })
+    var lock = new Auth0Lock('dCLsz1hEmVYS3KFLS9pUT2LeVFitNRhO', 'rbla3066.auth0.com');
+  
+  
+  function signin() {
+    lock.show({
+        callbackURL: 'https://experiod.herokuapp.com/user',
+        responseType: 'code',
+        authParams: {
+        scope: 'openid picture displayName id'
+      }
+    });
+  }
+    </script>
+</body>
+
+</html>
