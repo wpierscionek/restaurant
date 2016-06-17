@@ -8,8 +8,7 @@
           DISCUSSION PROJECT HELP COLLABORATION GROUP CODE NEWJERSEY NEW JERSEY JQUERY HTML CSS BOOTSTRAP
           LINUX WINDOWS MAC IOS ANDROID FULLSTACK FULL STACK DEV DEVELOPMENT JRDEV JR ">
     <meta name="description" content="Survey based application to help a user find the perfect restaurant or bar to goto at anytime of the day or night. Whether the user wants a late night snack or a romantic dinner, we will place that person to the perfect location!!!!">
-    
-   <!-- SOCIAL MEDIA ICONS -->
+    <!-- SOCIAL MEDIA ICONS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/ionicons/2.0.1/css/ionicons.css">
     <!-- GOOGLE FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700|Oswald' rel='stylesheet' type='text/css'>
@@ -79,25 +78,25 @@
     <script src="https://cdn.auth0.com/js/lock-9.1.min.js"></script>
     <script type="text/javascript">
     var url = window.location.origin;
-    $.get(url + '/user-info', function(result){
+    $.get(url + '/user-info', function(result) {
         console.log(result)
-        if(result.id != undefined){
-            $("#modalBox").append('<button type="button" id="modalSwitch" style="display:none" class="btn btn-primary" data-toggle="modal"data-target="#myModal">Details</button><div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><div class="row"><div class="col-md-5 col-sm-5"><img style="height:175px" class="img-responsive" src='+result.picture+'></div><div class="col-md-7 col-sm-7 text-xs-center"><br><h3 class="modal-title" style="font-size:22px" id="myModalLabel">Welcome Back '+result.displayName+'!</h3><br><a class="btn btn-danger waves-effect waves-light text-xs-center" style="background-color: #f44336; color: white; margin-left:40px" href="/survey-request">Find Matches <span class="glyphicon glyphicon-search"></span></a><br><button type="button" style="margin-left:65px" class="btn btn-secondary text-xs-center" data-dismiss="modal">Not you?</button></div></div></div></div></div></div>');
+        if (result.id != undefined) {
+            $("#modalBox").append('<button type="button" id="modalSwitch" style="display:none" class="btn btn-primary" data-toggle="modal"data-target="#myModal">Details</button><div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-body"><div class="row"><div class="col-md-5 col-sm-5"><img style="height:175px" class="img-responsive" src=' + result.picture + '></div><div class="col-md-7 col-sm-7 text-xs-center"><br><h3 class="modal-title" style="font-size:22px" id="myModalLabel">Welcome Back ' + result.displayName + '!</h3><br><a class="btn btn-danger waves-effect waves-light text-xs-center" style="background-color: #f44336; color: white; margin-left:40px" href="/survey-request">Find Matches <span class="glyphicon glyphicon-search"></span></a><br><button type="button" style="margin-left:65px" class="btn btn-secondary text-xs-center" data-dismiss="modal">Not you?</button></div></div></div></div></div></div>');
             $("#modalSwitch").click();
         }
     })
     var lock = new Auth0Lock('dCLsz1hEmVYS3KFLS9pUT2LeVFitNRhO', 'rbla3066.auth0.com');
-  
-  
-  function signin() {
-    lock.show({
-        callbackURL: 'https://experiod.herokuapp.com/user',
-        responseType: 'code',
-        authParams: {
-        scope: 'openid picture displayName id'
-      }
-    });
-  }
+
+
+    function signin() {
+        lock.show({
+            callbackURL: 'https://experiod.herokuapp.com/user',
+            responseType: 'code',
+            authParams: {
+                scope: 'openid picture displayName id'
+            }
+        });
+    }
     </script>
 </body>
 

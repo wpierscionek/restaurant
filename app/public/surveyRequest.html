@@ -14,7 +14,6 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
-    
     <!-- SOCIAL MEDIA ICONS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- GOOGLE FONTS -->
@@ -53,7 +52,6 @@
                 <ul id="restaurants" class="collection z-depth-3">
                     <li class="collection-item avatar">
                         <span><h3 style='float: left; margin-left: 25px'>Finding Your Survey Results... </h3></span><span><img class='text-right' src="images/spiffygif_46x46.gif" style='margin-top: 15px; margin-left: 35px'alt="" class="circle"><span></span>
-                        
                     </li>
                 </ul>
             </div>
@@ -117,18 +115,16 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
 <script type="text/javascript">
-    var url = window.location.origin;
-   $.get(url + '/api/survey-request', function(result){
-        if(result){
-            window.location.replace(url + '/location')
-        } else {
-            window.location.replace(url + '/survey')
-        }
-   })
-        
+var url = window.location.origin;
+$.get(url + '/api/survey-request', function(result) {
+    if (result) {
+        window.location.replace(url + '/location')
+    } else {
+        window.location.replace(url + '/survey')
+    }
+})
 </script>

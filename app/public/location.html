@@ -14,7 +14,6 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
-    
     <!-- SOCIAL MEDIA ICONS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- GOOGLE FONTS -->
@@ -55,7 +54,6 @@
                 <ul id="restaurants" class="collection z-depth-3">
                     <li class="collection-item avatar">
                         <span><h3 style='float: left; margin-left: 25px'>Finding Your Location.. </h3></span><span><img class='text-right' src="images/spiffygif_46x46.gif" style='margin-top: 15px; margin-left: 35px'alt="" class="circle"><span></span>
-                        
                     </li>
                 </ul>
             </div>
@@ -117,42 +115,39 @@
             </div>
         </div>
     </footer>
-    
-
 </body>
 
 </html>
 <script type="text/javascript">
-var user ={
-        latitude:'',
-        longitude:''
-    };
-$(document).ready(function(){
-    
+var user = {
+    latitude: '',
+    longitude: ''
+};
+$(document).ready(function() {
 
-    if (navigator.geolocation){
+
+    if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(getPosition);
-    }
-    else{
-      $("#restaurant").html("Your browser does not support location. Please enable geolocation services.")
+    } else {
+        $("#restaurant").html("Your browser does not support location. Please enable geolocation services.")
     }
 });
-function getPosition(position){ 
-    user.latitude=position.coords.latitude;
-    user.longitude=position.coords.longitude;
-    postData();   
+
+function getPosition(position) {
+    user.latitude = position.coords.latitude;
+    user.longitude = position.coords.longitude;
+    postData();
 };
-function postData(){
+
+function postData() {
     var url = window.location.origin;
     $.post(url + '/api/location', user, function(user) {
-        if(user.location != undefined){
+        if (user.location != undefined) {
             window.location.replace(url + '/main');
         } else {
             $("#restaurant").html("Error: we could not find your location!")
         }
-        
+
     });
 }
-
-        
 </script>
