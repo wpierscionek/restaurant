@@ -2,9 +2,9 @@ var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 
 var strategy = new Auth0Strategy({
-    domain: 'rbla3066.auth0.com',
-    clientID: 'dCLsz1hEmVYS3KFLS9pUT2LeVFitNRhO',
-    clientSecret: '7aYE3BvRnRHqjq9SYhA6BiVaHAnV5rr4FPVcKxpVajMpky5IBq7X0PmOHsQo8BBY',
+    domain: 'wpierscionek.auth0.com',
+    clientID: 'MrJHf99e597QFSyaGzwi1gdiZsT1n22r',
+    clientSecret: 'XsJHX8s5lTW_lmwySrB1vbL66dApt6qFbwamjnfPx34KLvqYAirr2Ui02v5XFSYC',
     callbackURL: 'https://experiod00.herokuapp.com/user'
 }, function(accessToken, refreshToken, extraParams, profile, done) {
     // accessToken is the token to call Auth0 API (not needed in the most cases)
