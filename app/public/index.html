@@ -85,12 +85,12 @@
             $("#modalSwitch").click();
         }
     })
-    var lock = new Auth0Lock('dCLsz1hEmVYS3KFLS9pUT2LeVFitNRhO', 'rbla3066.auth0.com');
+    var lock = new Auth0Lock('MrJHf99e597QFSyaGzwi1gdiZsT1n22r', 'wpierscionek.auth0.com');
 
 
     function signin() {
         lock.show({
-            callbackURL: 'https://experiod.herokuapp.com/user',
+            callbackURL: 'https://experiod00.herokuapp.com/user',
             responseType: 'code',
             authParams: {
                 scope: 'openid picture displayName id'
