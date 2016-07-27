@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Experiod</title>
-    <meta name="keywords" content="RCB CODING NODE.JS NODE JAVASCRIPT HTML auth0 EXPRESS MEAN MySQL  REACT METEOR NoSQL SOCIAL YELP
-          DISCUSSION PROJECT HELP COLLABORATION GROUP CODE NEWJERSEY NEW JERSEY JQUERY HTML CSS BOOTSTRAP
-          LINUX WINDOWS MAC IOS ANDROID FULLSTACK FULL STACK DEV DEVELOPMENT JRDEV JR ">
+    <meta name="keywords" content="RCB CODING NODE.JS NODE JAVASCRIPT HTML auth0 EXPRESS MEAN MySQL  REACT METEOR NoSQL SOCIAL YELP DISCUSSION PROJECT HELP COLLABORATION GROUP CODE NEWJERSEY NEW JERSEY JQUERY HTML CSS BOOTSTRAP LINUX WINDOWS MAC IOS ANDROID FULLSTACK FULL STACK DEV DEVELOPMENT JRDEV JR ">
     <meta name="description" content="Survey based application to help a user find the perfect restaurant or bar to goto at anytime of the day or night. Whether the user wants a late night snack or a romantic dinner, we will place that person to the perfect location!!!!">
+    <!-- Scripts -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Tether -->
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.2/js/tether.min.js'></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
     <!-- SOCIAL MEDIA ICONS -->
@@ -19,7 +20,7 @@
     <!-- GOOGLE FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script:700|Oswald' rel='stylesheet' type='text/css'>
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- MDB core CSS -->
     <link href="css/mdb.min.css" rel="stylesheet">
     <style type="text/css">
@@ -74,157 +75,170 @@
     </nav>
     <!-- /NAV -->
     <div class="container">
-        <br>
-        <h4 class='headerText'> Before we start, we want to get to know you better. Here at Experiod we want to match you with the Restaurants and Bars that fit you best!
-        <br>
-        <br>
-        </h4>
-        <br>
-        <br>
-        <br>
         <div class="row">
-            <div class="col-md-10">
-                <div class="card" style="margin: auto">
-                    <div class="card-header">
-                        <h3 id="select">Select all food/beverage categories that you desire:
-                  </h3>
-                    </div>
-                    <div class="card-block" style="font-size:20px; color: black">
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox1" value="Restaurants"> Restaurants
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox2" value="Pizza"> Pizza
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox3" value="Italian"> Italian
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox4" value="Delis"> Delis
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox5" value="Sushi Bars"> Sushi Bars
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox6" value="Sandwiches"> Sandwiches
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox7" value="American (Traditional)"> American (Traditional)
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox8" value="Nightlife"> Nightlife
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox9" value="Burgers"> Burgers
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox10" value="American (New)"> American (New)
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox11" value="Bars"> Bars
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox12" value="Breakfast & Brunch"> Breakfast & Brunch
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox13" value="Chinese"> Chinese
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox14" value="Fast Food"> Fast Food
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox15" value="Cafes"> Cafes
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox16" value="Caterers"> Caterers
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox17" value="Mexican"> Mexicans
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox18" value="Bagels"> Bagels
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox19" value="Diners"> Diners
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox20" value="Pubs"> Pubs
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox21" value="Seafood"> Seafood
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox22" value="Japanese"> Japanese
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox23" value="Asian Fusion"> Asian Fusion
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox24" value="Thai"> Thai
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input class="form-control" type="checkbox" id="inlineCheckbox25" value="Salad"> Salad
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-10 col-md-offset-1 text-center">
+                <div class="card-header">
+                    <h5 id="select">Select all food/beverage categories that you desire</h5>
+                    <hr>
                 </div>
             </div>
         </div>
-        <div class="headerText" style="height: 50px"></div>
-        <br>
-        <br>
-        <div class="row color1">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 card-header">
-                <div class="">
-                    <h3> Please fill out the survey below. The more answers you give, the better your results are!
-                  </h3>
-                </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <form class="form-inline">
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Restaurants" id="inlineCheckbox1">
+                        <label for="inlineCheckbox1">Restaurants</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Pizza" class="filled-in" id="inlineCheckbox2">
+                        <label for="inlineCheckbox2">Pizza</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Italian" id="inlineCheckbox3">
+                        <label for="inlineCheckbox3">Italian</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Delis" id="inlineCheckbox4">
+                        <label for="inlineCheckbox4">Delis</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Sushi Bars" id="inlineCheckbox5">
+                        <label for="inlineCheckbox5">Sushi Bars</label>
+                    </fieldset>
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <form class="form-inline">
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Sandwiches" id="inlineCheckbox6">
+                        <label for="inlineCheckbox6">Sandwiches</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="American (Traditional)" class="filled-in" id="inlineCheckbox7">
+                        <label for="inlineCheckbox7">American (Traditional)</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Nightlife" id="inlineCheckbox8">
+                        <label for="inlineCheckbox8">Nightlife</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Burgers" id="inlineCheckbox9">
+                        <label for="inlineCheckbox9">Burgers</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="American (New" id="checkbox13">
+                        <label for="checkbox13">American (New)</label>
+                    </fieldset>
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <form class="form-inline">
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Bars" id="inlineCheckbox11">
+                        <label for="inlineCheckbox11">Bars</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Breakfast & Brunch" class="filled-in" id="inlineCheckbox12">
+                        <label for="inlineCheckbox12">Breakfast & Brunch</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Chinese" id="inlineCheckbox13">
+                        <label for="inlineCheckbox13">Chinese</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Fast Food" id="inlineCheckbox14">
+                        <label for="inlineCheckbox14">Fast Food</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Cafes" id="inlineCheckbox15">
+                        <label for="inlineCheckbox15">Cafes</label>
+                    </fieldset>
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <form class="form-inline">
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Caterers" id="inlineCheckbox16">
+                        <label for="inlineCheckbox16">Caterers</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Mexican" class="filled-in" id="inlineCheckbox17">
+                        <label for="inlineCheckbox17">Mexicans</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Bagels" id="inlineCheckbox18">
+                        <label for="inlineCheckbox18">Bagels</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Diners" id="inlineCheckbox19">
+                        <label for="inlineCheckbox19">Diners</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Pubs" id="inlineCheckbox20">
+                        <label for="inlineCheckbox20">Pubs</label>
+                    </fieldset>
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <form class="form-inline">
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Seafood" id="inlineCheckbox21">
+                        <label for="inlineCheckbox21">Seafood</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Japanese"  class="filled-in" id="inlineCheckbox22">
+                        <label for="inlineCheckbox22">Japanese</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Asian Fusion" id="inlineCheckbox23">
+                        <label for="inlineCheckbox23">Asian Fusion</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Thai" id="inlineCheckbox24">
+                        <label for="inlineCheckbox24">Thai</label>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <input type="checkbox" value="Salad" id="inlineCheckbox25">
+                        <label for="inlineCheckbox25">Salad</label>
+                    </fieldset>
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 card-header text-center">
+                <h3> Please fill out the survey below. The more answers you give, the better your results are!</h3>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>Do you like to drink when you go out?  
+                <h5>Do you like to drink when you go out?  
             <select class="text-xs-right" data-type="alcohol" id="quest2">
                 <option value="0" selected="selected"></option>
                 <option value="1">I don't drink</option>
                 <option value="2">Sometimes</option>
                 <option value="3">Always need a brew!</option>
-            </select></h3>
+            </select></h5>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>How far are you willing to travel?  
+                <h5>How far are you willing to travel?  
             <select class="text-xs-right" data-type="distance" id="quest3">
                 <option value="0" selected="selected"></option>
                 <option value="5">5 Miles</option>
@@ -232,50 +246,50 @@
                 <option value="15">15 Miles</option>
                 <option value="20">20 Miles</option>
                 <option value="25">25+ Miles</option>
-            </select></h3>
+            </select></h5>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>Do you usually go out with a group?  
+                <h5>Do you usually go out with a group?  
             <select class="text-xs-right" data-type="group" id="quest4">
                 <option value="0" selected="selected"></option>
                 <option value="1">I fly solo</option>
                 <option value="2">Sometimes</option>
                 <option value="3">Always with my pals</option>
-            </select></h3>
+            </select></h5>
             </div>
             <br>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>Do you take your kids out with you?  
+                <h5>Do you take your kids out with you?  
             <select class="text-xs-right" data-type="kids" id="quest5">
                 <option value="0" selected="selected"></option>
                 <option value="1">No Kids</option>
                 <option value="2">Sometimes</option>
                 <option value="3">Always babysitting</option>
-            </select></h3>
+            </select></h5>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-inline card card-block">
-                <h3>Are you frequently looking for a quiet night out with a loved one?  
+                <h5>Are you frequently looking for a quiet night out with a loved one?  
             <select class="text-xs-right" data-type="noise" id="quest6">
                 <option value="0" selected="selected"></option>
                 <option value="1">No, I'm ready to party</option>
                 <option value="2">I don't mind some noise</option>
                 <option value="3">Peace and quiet please</option>
-            </select></h3>
+            </select></h5>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>What sort of ambience best describes your interests?  
+                <h5>What sort of ambience best describes your interests?  
             <select class="text-xs-right" data-type="ambience" id="quest7">
                 <option value="0" selected="selected"></option>
                 <option value="casual">Casual</option>
@@ -286,111 +300,114 @@
                 <option value="trendy">Trendy</option>
                 <option value="upscale">Upscale</option>
                 <option value="intimate">Intimate</option>
-            </select></h3>
+            </select></h5>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>Would you like to dance tonight or listen to some live music?  
+                <h5>Would you like to dance tonight or listen to some live music?  
             <select class="text-xs-right" data-type="music" id="quest8">
                 <option value="0" selected="selected"></option>
                 <option value="1">No thanks</option>
                 <option value="2">Ehhh...</option>
                 <option value="3">Yes Please!</option>
-            </select></h3>
+            </select></h5>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>Do you often go for take-out or delivery instead?  
+                <h5>Do you often go for take-out or delivery instead?  
             <select class="text-xs-right" data-type="take-out" id="quest9">
                 <option value="0" selected="selected"></option>
                 <option value="1">Never take-out</option>
                 <option value="2">Sometimes</option>
                 <option value="3">Always take-out</option>
                 <option value="4">Send me food!</option>
-            </select></h3>
+            </select></h5>
             </div>
         </div>
         <div class="row color1">
             <div class="col-md-1"></div>
             <div class="col-md-10 form-group card card-block">
-                <h3>Are you the type to make reservations in advanced or just walk in?  
+                <h5>Are you the type to make reservations in advanced or just walk in?  
             <select class="text-xs-right" data-type="reservations" id="quest10">
                 <option value="0" selected="selected"></option>
                 <option value="1">I always plan ahead</option>
                 <option value="2">Doesn't matter</option>
                 <option value="3">I just walk in</option>
-            </select></h3>
+            </select></h5>
             </div>
             <br>
             <br>
             <br>
             <br>
         </div>
-        <div class="text-xs-center">
-            <button type="button" id="submitButton" class="btn btn-danger btn-lg">Submit</button>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <button type="button" id="submitButton" class="btn btn-danger">Submit</button>
+            </div>
         </div>
-        <footer class="page-footer elegant-color center-on-small-only">
+    </div>
+    <footer class="page-footer elegant-color center-on-small-only">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <!--first column-->
+                <div class="col-md-3">
+                    <p class="column-title white-text">USEFUL LINKS</p>
+                    <ul>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Bug Report</a></li>
+                        <li><a href="#">License</a></li>
+                    </ul>
+                </div>
+                <!--/.first column-->
+                <!--second column-->
+                <div class="col-md-3">
+                    <p class="column-title white-text">Similar</p>
+                    <ul>
+                        <li><a href="#">Book Hotel</a></li>
+                        <li><a href="#">Order Pizza</a></li>
+                        <li><a href="#">Go Out</a></li>
+                        <li><a href="#">Fun Places</a></li>
+                        <li><a href="#">Night-Life</a></li>
+                    </ul>
+                </div>
+                <!--/.second column-->
+                <!--third column-->
+                <div class="col-md-3">
+                    <p class="column-title white-text">Popular</p>
+                    <ul>
+                        <li><a href="#">stakehouse.com</a></li>
+                        <li><a href="#">yelp.com</a></li>
+                        <li><a href="#">newrestautrant.com</a></li>
+                        <li><a href="#">enjoymore.com</a></li>
+                        <li><a href="#">njrestaurants.com</a></li>
+                    </ul>
+                </div>
+                <!--/.third column-->
+                <div class="col-md-3">
+                    <p class="column-title white-text">Popular</p>
+                    <ul>
+                        <li><a href="#">stakehouse.com</a></li>
+                        <li><a href="#">yelp.com</a></li>
+                        <li><a href="#">newrestautrant.com</a></li>
+                        <li><a href="#">enjoymore.com</a></li>
+                        <li><a href="#">njrestaurants.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="social-section text-center">
+        </div>
+        <div class="footer-copyright text-center rgba-black-light">
             <div class="container-fluid">
-                <div class="row text-center">
-                    <!--first column-->
-                    <div class="col-md-3">
-                        <p class="column-title white-text">USEFUL LINKS</p>
-                        <ul>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Bug Report</a></li>
-                            <li><a href="#">License</a></li>
-                        </ul>
-                    </div>
-                    <!--/.first column-->
-                    <!--second column-->
-                    <div class="col-md-3">
-                        <p class="column-title white-text">Similar</p>
-                        <ul>
-                            <li><a href="#">Book Hotel</a></li>
-                            <li><a href="#">Order Pizza</a></li>
-                            <li><a href="#">Go Out</a></li>
-                            <li><a href="#">Fun Places</a></li>
-                            <li><a href="#">Night-Life</a></li>
-                        </ul>
-                    </div>
-                    <!--/.second column-->
-                    <!--third column-->
-                    <div class="col-md-3">
-                        <p class="column-title white-text">Popular</p>
-                        <ul>
-                            <li><a href="#">stakehouse.com</a></li>
-                            <li><a href="#">yelp.com</a></li>
-                            <li><a href="#">newrestautrant.com</a></li>
-                            <li><a href="#">enjoymore.com</a></li>
-                            <li><a href="#">njrestaurants.com</a></li>
-                        </ul>
-                    </div>
-                    <!--/.third column-->
-                    <div class="col-md-3">
-                        <p class="column-title white-text">Popular</p>
-                        <ul>
-                            <li><a href="#">stakehouse.com</a></li>
-                            <li><a href="#">yelp.com</a></li>
-                            <li><a href="#">newrestautrant.com</a></li>
-                            <li><a href="#">enjoymore.com</a></li>
-                            <li><a href="#">njrestaurants.com</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <p>© 2015 Copyright Experiod</p>
             </div>
-            <div class="social-section text-center">
-            </div>
-            <div class="footer-copyright text-center rgba-black-light">
-                <div class="container-fluid">
-                    <p>© 2015 Copyright Experiod</p>
-                </div>
-            </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 
 </html>
