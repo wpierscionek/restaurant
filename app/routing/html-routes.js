@@ -10,6 +10,7 @@ var requiresLogin = require('./requiresLogin.js');
 // Routes
 // =============================================================
 module.exports = function(app) {
+    // if asked will send survey page
     app.get('/location', requiresLogin, function(req, res) {
         res.sendFile(path.join(__dirname + '/../public/location.html'));
     });
@@ -22,11 +23,6 @@ module.exports = function(app) {
         } else {
             res.sendFile(path.join(__dirname + '/../public/survey.html'));
         }
-    });
-    app.get('/surveyy', requiresLogin, function(req, res) {
-        req.user.survey = undefined;
-        req.user.location = undefined;
-        res.sendFile(path.join(__dirname + '/../public/survey.html'));
     });
 
     app.get('/main', requiresLogin, function(req, res) {
