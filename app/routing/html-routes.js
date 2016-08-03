@@ -18,9 +18,7 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname + '/../public/surveyRequest.html'));
     });
     app.get('/survey', requiresLogin, function(req, res) {
-        if (req.user.survey != undefined) {
-            res.sendFile(path.join(__dirname + '/../public/surveyRequest.html'));
-        } else {
+
             res.sendFile(path.join(__dirname + '/../public/survey.html'));
         }
     });
