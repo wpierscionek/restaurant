@@ -25,6 +25,7 @@ module.exports = function(app) {
     });
     app.get('/surveyy', requiresLogin, function(req, res) {
         req.user.survey = undefined;
+        req.user.location = undefined;
         res.sendFile(path.join(__dirname + '/../public/survey.html'));
     });
 
